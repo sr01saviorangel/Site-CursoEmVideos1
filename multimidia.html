@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrutura site</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<script src="javascript/funcoes.js"></script>
+<body>
+
+<div id="interface">
+
+<header id="cabecalho">
+    <hgrupo>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgrupo>
+
+ <img id="incone" src="imagens/multimidia.png"/>
+    <nav id="menu">
+    <h1>Menu Principal</h1>
+        <ul>
+            <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/multimidia.png')"><a href="index.html"> Home</a></li>
+            <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/multimidia.png')"><a href="fotos.html"> Fotos</a></li>
+            <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaFoto('imagens/contato.png')" onmouseout="mudaFoto('imagens/multimidia.png')"><a href="fale-conosco.html"> Fale conosco</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+    <header id="cabecalho-noticia-principal">
+        <hgroup>
+            <h3>Glass > Multimídia</h3>
+            <h1>Sons e Vídeos</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
+        </header>
+    </article>
+<div id="tv-radio">
+    <audio id="musica" controls="controls" width="400" height="315">
+        <source src="media/2009-lovers-carvings-bibio.mp3" type="audio/mp3">
+    </audio>
+    <iframe name="video" id="video" width="560" height="315" src="https://www.youtube.com/embed/4EvNxWhskf8?si=z4njpXolPEiG5phH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+</div>
+</section>
+
+<footer id="rodape">
+    <p>Copyright 2013 - by Gustavo Guanabara <br/> 
+    <a href="htpp//www.facebook.com.br/savioaulas">Facebook</a> <a href="htpp//wwww.twitter.com/savioaula"> Twitter</a> </p>
+    </footer>
+    
+    </div>
+    </body>
+    </html> 

@@ -1,0 +1,15 @@
+@charset "UFT-8 ";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+iframe#iframe-spec {
+    width: 425px;
+    height: 280px;
+    border: none;
+    overflow-y: auto;
+}
+iframe#iframe-spec::-webkit-scrollbar {
+    display: none;
+}

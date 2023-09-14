@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@font-face {
+    font-family: logofonte ;
+    src: url(../_fonts/bubblegum-sans-regular.otf);
+    font-family: logofonte2;
+    src: url(../_fonts/computer-font.ttf);
+}
+body{
+    background-color: #dddddd;/*  e o fundo gefral do site */
+    font-family: Arial, sans-serif;
+}
+div#interface{
+    background-color: #ffffff; /* a cor do fundo do meu contenie que e o div tudo que ta dentro da div vai ter o fundo mudado  */
+    width: 1100px;/* tamanho do meu contenei  */
+    margin: -20px auto 10px auto; /*decidimos a marge e criamos delimitação para nosso contenie */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);/*sombra de interface para body deixamos para da um efeito visual mais bonito  */
+    padding: 10px;/* criamos margem de delemita na parte de dentro do contenei */
+}
+header#cabecalho img#incone{  /* SELECIONAMOS ONDE ESTA A CLASSE SECUNDARTIA QUE O IMG E PRIMEIRO DIZEMOS ONDE SE ENCOTRA ESSE IMG CRINADO UMA CLASSE E DIZEMOS SEMANTICAMENTE E APENAS UMA CLASSE  ELA IRA APENAS TER PODER SOBRE O SEGUNDO INTEM IMG QUE SE ENCONTRA NO HEADER */
+    position: absolute;
+    left: 1055px;
+    top: 57px; ;
+}
+header#cabecalho{
+    border-bottom: #606060 solid ; /* com o borde podemos dividi o contenie / criamos aqui a linha que separa os cabçario dos paragrafos usamos o borde e damos uma solides ale que aparece visualmente , ao inves de solido pode colocar outras forma como --- e com pontilhado fica a criterio do desinige*/
+    height: 135px; /*  aqui nesse ponto definimos a altura da linha */ 
+    background: url(../_imagens/glass-logo-peq.jpg)no-repeat 0px 75px;/* podemos inserir logo ou imagem por meio do paramentro , se o aquivo que stmos no css for uma a frente , teremos que fazer o ../ para volta para a pasta princiapal e seleciona a desejada , se prestamos bem atenção colocamos no repete para que a imagem seja colocada apenas uma unica vez , pois se nao colocassemos essse paramentro ela iria se repetiri prencendo assim todo o contenie cabecalho e definimos o pix horizontal que e o primeiro e o segundo e vertical ai fica a criretio */
+}
+header#cabecalho h1{
+    font-family: logofonte ,  sans-serif;/*  tipo da fonte que queremos*/
+    font-size: 30pt;/* tamanho da fonte */
+    color: #606060; /* cor*/
+    text-shadow: 1px 1px 1px rgba(0 ,0,0,.6);/*sombra e transparencia e borrão  */
+    margin-bottom: 0px; /* aqui delimitamos a margin de fora */
+}
+header#cabecalho h2{
+    font-family: Arial,  sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    margin-top: 0px;
+}
+/* variavel para paragrafos */
+p {
+    text-indent: 50px;
+    text-align: justify; 
+}
+/* formatação de image para legenda class foto-legenda */
+figure.foto-legenda {
+    position: relative;/*colocamos essa posicção na casa pai para referencia a positon absulute da classe filha */
+    border: 8px solid white ;  /* criaremos uma borda */
+    box-shadow: 1px 1px 4px black;/* criaremos uma sobra para borda */
+}
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%; 
+    /* fazemos com que a borda se encaixe na imagem certa */
+}
+figure.foto-legenda figcaption { /* filha da class figure.foto-legenda tem o mesmo nome mais na fnente ela ganha novo nome , o conseito de orientação a objeto e grande em css , vamos fazer a legenda fica transparente sem passar o mause por cima e quando passa o mause por cima ira aparecer */
+        opacity: 0;
+        position:absolute;
+        top: 0px;
+        background-color: rgba(0,0,0,.4);
+        color: white;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: 1s;
+        /* nesse ponto deixamos a legenda oculta e com aparencia preta na imagem , vamos agora fazer com que ela apareca assim que passar o mause , na proxima função */
+}
+figure.foto-legenda:hover figcaption { /* o hover vai fazer dispara uma formatação especifica */
+    opacity: 1;
+
+}
+nav#menu{ /*  criamos aqui uma classe para menu inteiro */
+    display: block; /* transformei o menu nav em bloco para poder movimentar pelo site */
+}
+nav#menu ul { /*  criamos aqui uma class para o intem do menur ul */
+    list-style: none; /* aqui fazemos com que aquelas marcaçoes que ficam na frente do intems dos menus sumam  */
+    text-transform: uppercase; /* deixamso todas as letras do texto em maiuculas  */
+    position: absolute; /* aqui indicamos que queromos a posição dele da tag ul absoluta movimentação perante todo site  */
+    top: -20px;/*  colocameros ele no topo indicando a possição topo */
+    left: 550px; /* onde vai se encontra os botoes de menu */
+    
+}
+    nav#menu li { /*  aqui criamos uma class para todos os intens li o que botamos de paramentos so ira funcuionar edntro das tag li */
+        display: inline-block; /* irar colocar  os intens an mesma linha   */
+        background-color: #dddddd; /* colocar a cor no fundo dando detalhe que e um botão */
+        padding: 10px; /*  ira colocar os espaços entre os intens do menur criando assim um espeça na parte de dentro */
+        margin: 2px; /*  criara um espaço na margem de fora */
+        transition: background-color 1s ;/*  criamos o efeito de atraso do hover*/
+    
+}
+nav#menu li:hover{ /* classe que iremos criar para efeito quando o mause passar por cima da tag no site  */
+    background-color: #606060; /*  a cor da trasition*/
+}
+nav#menu a { /*  criamos aqui uma classe para os tagd de link de caminho pois elas firam verde referenciado a um link externo */
+    color: #000000; /* a cor que deixamos ela , pois passamos para preto o azul  */
+    text-decoration: none; /* tiramos aqui o subilinhado  */
+}
+nav#menu a:hover{
+    color: #ffffff; /*  deixamos o efeito das letras com branco assim que passamos o mause */
+}
+ nav#menu h1{
+        display: none; /*  deixamos ocultado a tag h1 do visula pois ela so servira semanticamente e organização*/
+}
+section#corpocentral{
+        display: block;/*  aqui criamos o displei da do corpo central */
+        width: 600px;/* aqui definimos o tamano em px do contenei  */
+        float: left;    /* aqui definimos onde ele vai ficarem qual lado do onteine princcipal do div   , deixamos ele flutuando e decidimos o lado */
+        border-right: 1px #606060 solid;/*  aqui crimaos a linha , peceba que escolhemos o lado oposto  pois sabendo que e para dividir os conteines e corpos*/
+        padding: 20px;/*  aqui aumentamos a margem */
+} 
+aside#lateral{
+        display: block;/* aqui crimos o corpo lateral  */
+        width: 430px;/* definimos o tamanho do corpo  */
+        float: right;/* definimos o lado que ele sera alocado  deixamos ele flutuando e decidimos o lado */
+        background-color: #cecece;
+        padding: 10px;
+        margin-top: 10px;
+        box-shadow: 2px 2px 2px rgba(0 ,0,0,.6)
+}
+aside#lateral h1{
+    font-family: logofonte , sans-serif ;
+    font-size: 15pt;
+    color: #606060;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+footer#rodape{
+        clear: both;/* aqui limpamos e delimitamos tudo a baixo no caso decidimos que o roda pe sera o final nao sera extrapolaod do rodape , sabemos que ele vai ser o final  */
+        border-top: 1px #606060 solid;/*  aqui criamos a lista do roda pe e denimos no topo pois e acima */
+}     
+footer#rodape p {/* aqui criamos a instancia do rodaa pe sendo que as fucçaõ so ira ser aplicada ao vertor p  */
+    text-align: center;/* aqui deixamos tudo no centro  */
+}
+table#index1{  /* criamos uma classe para a tabela */
+    border: 1px solid #606060 ; /*  aqui criamos uma borda que delemita toda a tabela */
+    border-spacing:  0px ;/* aquie e os espaco esntra a celular */
+    margin-left: auto; /* aqui usaremos para centralizar  */
+    margin-right: auto;/* da mesma forma do margin anterior */
+}
+table#index1 td { /* aqui criamos a class para poder deixa a tabelas com os elemntod */
+    border: 1px solid #606060; /* aqui crimaos a borda */
+    padding: 10px;  /* aqui aumentamos a mergem  */
+    vertical-align: middle; /*  aqui deixamos todos as aorde do text*/
+}
+table#index1 td.ce {  /* aquie a class dos elementos da esquerda  */
+    color: #ffffff; /*  mudamos a cor*/
+    background-color: #606060; /*mudamos a cor do fundo*/
+    vertical-align: top ;  /* indicamos onde vai ficar as palavras */
+    font-weight: bold; /* */ 
+}
+table#index1 td.cd {  /* criamos um class para a da direita*/
+    background-color:#cecece;  /*mudamos apenas a cor do fundo */
+}
+table#index1 caption{  /*o titutlo da tabela  */
+    color: #606060;  /* mudamdos a cor das letras*/
+    font-size: 13pt;  /*mudamos o tamanho da fonte */
+    font-weight: bold;  /* onde fica */
+}
+table#index1 caption span {  /*vamos mudar um nome do titulo o que e a data e deixa ele pequeno e no cantinho */
+    display: block; /*primeiro separamos com o block do desmais bloco fazendo com que ele seja apenas um bloco*/
+    float: right; /* quando ele flutua vamos dizer aposição */
+    color: #000000; /* indicamos a cor*/
+    font-size: 8pt; /* o tamanho da fonte*/
+    margin-top: 08px;   /*e a sua posição da margen  */ 
+}
+header#cabecalho-noticia-principal h1{
+    color: #606060;
+    font-family: logofonte, sans-serif ;
+    margin-bottom: 0px;
+    margin-top: 0px;   
+}
+header#cabecalho-noticia-principal h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;    
+}
+header#cabecalho-noticia-principal h3{
+    font-size: 13pt;
+    color: #606060;
+}
+.direita{
+    text-align: right;
+}
+a{
+    color: #606060;
+    text-decoration: none;
+}
+a :hover{
+    text-decoration: underline ;
+}
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding:  5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+video#video1{
+    display: block;
+    position: relative;
+    width: 600px; ;
+}
+video#video-lateral{
+    display: block;
+    position: relative;
+    width: 427px; ;
+}
+    

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrutura site</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        function calcuTot() {
+            var qtd = parseInt(document.getElementById("tqtd").value);/* aqui vamos  usa a var , que essa variavel qtd vai receber o valor de tquan sendo que usamos na prente do document  e colocamos o restante em () e igual mudamdos as streing dos input do python a parseint para tranforma as string em inteiro  , e  em seguidna usamos o id para referencia e no fim botamos ponto value que e exesitindo o valor definimos a primeira var*/
+            tot = qtd * 1500; /* aqui fazemos o calculo disemos o total e a quantidade vezes o valor de 1 oculos */
+            document.getElementById('ttot').value = tot; /* aqui dizemos que no documento e no elemento com id x o valor e = a o calculo tot*/
+        }
+    </script>
+
+</head>
+<script src="javascript/funcoes.js"></script>
+<body>
+
+<div id="interface">
+
+<header id="cabecalho">
+    <hgrupo>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgrupo>
+
+ <img id="incone" src="imagens/contato.png"/>
+    <nav id="menu">
+    <h1>Menu Principal</h1>
+        <ul>
+            <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/contato.png')"><a href="index.html"> Home</a></li>
+            <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/contato.png')"><a href="fotos.html"> Fotos</a></li>
+            <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaFoto('imagens/contato.png')" onmouseout="mudaFoto('imagens/contato.png')"><a href="index.html"> Fale conosco</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+    <header id="cabecalho-noticia-principal">
+        <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
+        </header>
+    </article>
+
+
+
+<form method="post" id="fcontaos" action="mailton:primeprestadora@gmail.com" oninput="calcuTot();">
+   <fieldset id="usuario">
+        <fieldset id="fild1"><legend>Identificação do Usuário</legend></fieldset>
+        <p><label for="tname"> Nome:</label><input type="text" name="cname" id="tname" size="20" maxlength="30" placeholder="Nome Completo"></p> 
+        <p> <label for="tpas"> Senha:</label><input type="password" name="cpas" id="tpas" size="6" maxlength="36" placeholder="*************"></p>
+        <p> <label for="temail">E-mail:</label><input type="email" name="cemail" id="temail" size="20" maxlength="30" placeholder="email@gmail.com"></p>
+        <fieldset id="Sexo"><legend>Sexo:</legend>
+            <input type="radio" name="csexo" id="tmasc"> <label for="tmasc">Masculino</label>
+            <input type="radio" name="csexo" id="tfem" > <label for="tfem">Feminino </label>
+        </fieldset>
+        <p><label for="tdate">Data de Nascimento:</label for><input type="date" name="cdate" id="tdate"  ></p>
+   </fieldset>
+    
+   <fieldset id="endereco">
+        <fieldset id="filde2"><legend>Endereço do Usuário</legend></fieldset>
+            <p><label for="tend">Logradouro</label>:<input type="text" name="cend" id="tend" size="30" maxlength="60" placeholder="Rua Av Bairro Trav"></p>
+            <p><label for="tnum">Número:</label><input type="number" name="cnum" id="tnum" size="0" maxlength="9999" placeholder="Numero"></p>
+            <p> <label for="test">Estado:</label>
+            <select name="cest" id="test">
+                    <option value="estado">Selecione o Estado</option> 
+                <optgroup label="Região Norte">
+                    <option value="ac">Acre</option> 
+                    <option value="am">Amazonas</option>
+                    <option value="pa">Pará</option>
+                    <option value="rr">Roraima</option> 
+                    <option value="to">Tocantins</option>
+                    <option value="ro">Rondônia</option> 
+                </optgroup>
+
+               <optgroup label="Região Nordeste">
+                    <option value="al">Alagoas</option> 
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option> 
+                    <option value="ma">Maranhão</option>
+                    <option value="se">Sergipe</option> 
+                    <option value="pb">Paraíba</option>
+                    <option value="pi">Piauí</option>  
+                    <option value="pe">Pernambuco</option>
+                    <option value="rn">Rio Grande do Norte</option>
+               </optgroup>
+                 
+               <optgroup label="Região Centro-Oeste">
+                    <option value="df">Distrito Federal</option>
+                    <option value="go">Goiás</option>
+                    <option value="mt">Mato Grosso</option> 
+                    <option value="ms">Mato Grosso do Sul</option>
+               </optgroup>
+
+               <optgroup label="Região Sudeste">
+                    <option value="es">Espírito Santo</option> 
+                    <option value="sp">São Paulo</option> 
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option> 
+               </optgroup>
+
+               <optgroup label="Região Sul">
+                    <option value="rs">Rio Grande do Sul</option>                
+                    <option value="sc">Santa Catarina</option> 
+                    <option  value="pr">Paraná</option>                   
+               </optgroup>
+             </select></p>
+            <p><label for="tcid">Cidade:</label><input type="text" name="ccid" id="tcid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidade" >
+            <datalist id="cidade">
+                <option value="Rio de Janeiro"></option>
+                <option value="João Dourado"></option>
+                <option value="Central"></option>
+                <option value="Irecê"></option>
+                <option value="Xique-Xique"></option>
+                <option value="lapão"></option>
+            </datalist></p>
+   </fieldset>
+    
+   <fieldset id="mensagem">
+       <fieldset id="filde3"><legend> Mensagem do Usuário</legend></fieldset>
+            <p><label>Grau de Urgência:</label>Min<input type="range" name="cgrau" id="tgrau" min="0" max="10" step="1">Max</p>
+           <p><label> Mensagem:</label>
+           <textarea name="cmen" id="tmen" cols="45" rows="5" placeholder="Deixa aqui sua mensagem"></textarea></p>
+   </fieldset>
+    
+    <fieldset id="quero">
+       <fieldset id=""><legend> Quero um Google Glass</legend></fieldset>
+           <fieldset id="escolha"> <legend>Gostaria de adquirir um Google Glass quando disponível</legend>
+                <input type="radio" name="escolha" id="tsim" checked> <label for="tsim">SIM</label>
+                <input type="radio" name="escolha" id="tnao"><label for=" tnao">NAO</label>
+          </fieldset>
+            <p><label>Cor:</label><input type="color" name="ccolor" id="tcolor" value="#0000ff"></p>
+           <p> <label>Quantidade:</label><input type="number" name="cqtd" id="tqtd" min="0" max="5"></p>
+           <p> Preço Total R$: <input type="text" name="ctot" id="ttot"  placeholder=" TOTAL A PAGAR" readonly></p>
+    </fieldset>
+    
+    
+   <p><input type="image" name="tenviar" id="cenviar" src="imagens/botao-enviar.png" ></p>
+</fieldset>
+</form>
+</section>
+    
+
+<footer id="rodape">
+    <p>Copyright 2013 - by Gustavo Guanabara <br/> 
+    <a href="htpp//www.facebook.com.br/savioaulas">Facebook</a> <a href="htpp//wwww.twitter.com/savioaula"> Twitter</a> </p>
+    </footer>
+    
+</div>
+</body>
+</html> 
